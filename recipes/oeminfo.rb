@@ -23,10 +23,10 @@ cookbook_file 'C:\Windows\System32\oemlogo.bmp' do
 end
 
 registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation' do
-  values [{:name => 'Logo', :data => 'C:\Windows\System32\oemlogo.bmp'},
-          {:name => 'Manufacturer', :data => node['windowshacks']['oeminfo']['manufacturer']},
-          {:name => 'SupportHours', :data => node['windowshacks']['oeminfo']['supporthours']},
-          {:name => 'SupportPhone', :data => node['windowshacks']['oeminfo']['supportphone']},
-          {:name => 'SupportURL', :data => node['windowshacks']['oeminfo']['supporturl']}]
+  values [{:name => 'Logo', :type => :string, :data => 'C:\Windows\System32\oemlogo.bmp'},
+          {:name => 'Manufacturer', :type => :string, :data => node['windowshacks']['oeminfo']['manufacturer']},
+          {:name => 'SupportHours', :type => :string, :data => node['windowshacks']['oeminfo']['supporthours']},
+          {:name => 'SupportPhone', :type => :string, :data => node['windowshacks']['oeminfo']['supportphone']},
+          {:name => 'SupportURL', :type => :string, :data => node['windowshacks']['oeminfo']['supporturl']}]
   action :create
 end
