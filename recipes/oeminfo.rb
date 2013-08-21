@@ -19,6 +19,7 @@
 
 cookbook_file 'C:\Windows\System32\oemlogo.bmp' do
   source node['windowshacks']['oeminfo']['logofile']
+  rights :read, "Everyone"
   action :create
 end
 
