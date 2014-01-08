@@ -17,7 +17,11 @@
 # limitations under the License.
 #
 
-cookbook_file 'C:\Windows\System32\oemlogo.bmp' do
+# sysnative because Chef is a 32-bit Ruby executable and needs to access
+# the 64-bit System32 directory
+# See http://msdn.microsoft.com/en-us/library/windows/desktop/aa384187.aspx
+system32_path = node['kernel']['machine'] == 'x86_64' ? 'C:\Windows\Sysnative' : 'C:\Windows\System32'
+cookbook_file "#{system32_path}\\oemlogo.bmp" do
   source node['windowshacks']['oeminfo']['logofile']
   rights :read, "Everyone"
   action :create
