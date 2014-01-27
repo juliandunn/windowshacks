@@ -18,15 +18,10 @@
 # limitations under the License.
 #
 
-registry_key 'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Reliability' do
+registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability' do
   values [
     {
       :name => 'ShutdownReasonUI',
-      :type => :dword,
-      :data => 0
-    },
-    {
-      :name => 'ShutdownReasonOn',
       :type => :dword,
       :data => 0
     }
