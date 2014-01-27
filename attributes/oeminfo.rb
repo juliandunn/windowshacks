@@ -17,8 +17,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default['windowshacks']['oeminfo']['logofile'] = 'opscode-120x120.bmp'
-default['windowshacks']['oeminfo']['manufacturer'] = 'Opscode, Inc.'
+default['windowshacks']['oeminfo']['logofile'] = 'chef-mark-120x120.bmp'
+default['windowshacks']['oeminfo']['manufacturer'] = 'Chef Software, Inc.'
 default['windowshacks']['oeminfo']['supporthours'] = '24x7'
 default['windowshacks']['oeminfo']['supportphone'] = '206-508-4799'
-default['windowshacks']['oeminfo']['supporturl'] = 'http://www.opscode.com/'
+default['windowshacks']['oeminfo']['supporturl'] = 'http://www.getchef.com/'
